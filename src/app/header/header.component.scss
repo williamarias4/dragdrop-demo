@@ -1,0 +1,24 @@
+@import '../../assets/styles/main';
+
+.container {
+  background-color: $turquoise-standard;
+  height: 15vh;
+
+  .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, serif;
+    font-weight: 700;
+    font-size: 2em;
+
+    p {
+      color: white;
+      padding-top: 0.25vh;
+    }
+  }
+}
+
+
+
+
