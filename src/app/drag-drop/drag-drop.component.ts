@@ -1,5 +1,7 @@
 import {Component, Input} from '@angular/core';
-import {Orientation, Type} from './drag-drop.constants';
+import {Orientation, DragDropType} from './drag-drop.constants';
+import {DialogRef} from "../shared/dialog-ref";
+import {DialogService} from "../shared/dialog.service";
 
 @Component({
   selector: 'app-drag-drop',
@@ -8,14 +10,20 @@ import {Orientation, Type} from './drag-drop.constants';
 })
 export class DragDropComponent {
 
-  @Input() public type: Type;
+  @Input() public type: DragDropType;
   @Input() public addHandle: boolean;
   @Input() public orientation: Orientation;
   @Input() public restrictVerticalDrag: boolean;
   @Input() public restrictHorizontalDrag: boolean;
   @Input() public itemToDisableDrag: any;
 
-  constructor() {
+  constructor(
+    private dialogRef: DialogRef,
+  ) {
+  }
+
+  public close(): void {
+    this.dialogRef.close();
   }
 
 }

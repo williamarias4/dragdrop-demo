@@ -1,7 +1,5 @@
 <div class="container">
-  <button class="primary-button">Basic Drag & Drop</button>
-  <button class="primary-button">Sorting Drag & Drop</button>
-  <button class="primary-button">Connected Sorting</button>
-  <button class="primary-button">Connected Sorting Group</button>
-  <button class="primary-button">Orientation</button>
+  <ng-container *ngFor="let description of dragDropTypeDescriptions">
+    <button class="primary-button" (click)="openSelectedOption(description)">{{description}}</button>
+  </ng-container>
 </div>

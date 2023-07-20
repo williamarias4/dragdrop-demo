@@ -1,0 +1,16 @@
+
+.primary-button {
+  margin: 1vw;
+  background-color: $turquoise-standard;
+  border-radius: 4px;
+  border: none;
+  padding: 1.5vw;
+  color: white;
+  cursor: pointer;
+  min-width: 16vw;
+  font-size: $standard-font-size;
+
+  &:hover {
+    background-color: $turquoise-hover;
+  }
+}
