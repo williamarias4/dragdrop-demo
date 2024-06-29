@@ -1,12 +1,15 @@
 import {Component, Input} from '@angular/core';
 import {Orientation, DragDropType} from './drag-drop.constants';
 import {DialogRef} from "../shared/dialog-ref";
-import {DialogService} from "../shared/dialog.service";
 
 @Component({
   selector: 'app-drag-drop',
   templateUrl: './drag-drop.component.html',
-  styleUrls: ['./drag-drop.component.scss']
+  styleUrls: ['./drag-drop.component.scss'],
+  providers: [{
+    provide: DialogRef,
+    useValue: []
+  }]
 })
 export class DragDropComponent {
 
